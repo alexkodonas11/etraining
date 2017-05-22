@@ -1,0 +1,58 @@
+﻿
+ul.dropdown-cart{
+    min-width:250px;
+}
+ul.dropdown-cart li .item{
+    display:block;
+    padding:3px 10px;
+    margin: 3px 0;
+}
+ul.dropdown-cart li .item:hover{
+    background-color:#f3f3f3;
+}
+ul.dropdown-cart li .item:after{
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+ul.dropdown-cart li .item-left{
+    float:left;
+}
+ul.dropdown-cart li .item-left img,
+ul.dropdown-cart li .item-left span.item-info{
+    float:left;
+}
+ul.dropdown-cart li .item-left span.item-info{
+    margin-left:10px;   
+}
+ul.dropdown-cart li .item-left span.item-info span{
+    display:block;
+}
+ul.dropdown-cart li .item-right{
+    float:right;
+}
+ul.dropdown-cart li .item-right button{
+    margin-top:14px;
+}
+body{font-family:"Arial",sans-serif;background-image:url('../images/βαρη.jpg');background-size:cover}
+#header{padding-top:20px;background-size:cover;}/*background-image:url('../images/PersonalTraining.jpg');*/
+.navbar-inverse{background-color:#c;border:0}
+.navbar-inverse .navbar-nav > li > a,.navbar-inverse .navbar-brand{color:#fff}
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:focus, .navbar-inverse .navbar-nav > .active > a:hover{background-color: #f33f3d;}
+.trainer{background-color: #eaeaea;padding-top: 10px;display:block;color:#151515;}
+.trainer h2{font-size:20px;padding: 0 30px;}
+.trainer .profesion{font-size:16px;padding: 0 30px;margin-bottom:20px;}/*background-image:url('../images/PersonalTraining.jpg');*/
+.btn-primary{background:#ff4647;border:0}
+
+.course{background-color: #eaeaea;padding-top: 10px;display:block;color:#151515}
+.course h2{font-size:16px;padding: 0 30px;}
+.course .profesion{font-size:14px;padding: 0 30px;margin-bottom:20px;}/*background-image:url('../images/PersonalTraining.jpg')*/
+.search-course{padding-bottom:20px}
+#my-account-menu{border-left:1px solid #333}
+
+.ekfrash{font-size:18px;font-weight:bold}
+
