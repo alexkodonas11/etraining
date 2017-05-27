@@ -1,9 +1,10 @@
 <?php
-
 class View
 {
+    private $filename;
     public function render($filename, $data = null)
     {
+        $this->filename=$filename;
         if ($data) {
             foreach ($data as $key => $value) {
                 $this->{$key} = $value;
@@ -17,9 +18,5 @@ class View
     {
         header("Content-Type: application/json");
         echo json_encode($data);
-    }
-    public function encodeHTML($str)
-    {
-        return htmlentities($str, ENT_QUOTES, 'UTF-8');
     }
 }

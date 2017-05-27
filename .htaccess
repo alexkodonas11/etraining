@@ -1,12 +1,8 @@
 RewriteEngine On
 RewriteBase /etraining/
 RewriteCond %{SERVER_PORT} 81
-RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)/(.*)/(.*)$ index.php?controller=$1&action=$2&querystring=$3 [NC]
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)/(.*)$ index.php?controller=$1&action=$2 [NC]
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /etraining/ [L,R]
+RewriteCond %{REQUEST_FILENAME} !-l
+
+RewriteRule ^(.+)$ index.php?arg=$1

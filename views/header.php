@@ -1,10 +1,3 @@
-<?php
-
-// Για την εύρεση της τρέχουσας σελίδας
-// http://stackoverflow.com/questions/13336200/add-class-active-to-active-page-using-php 
-$current=basename($_SERVER['PHP_SELF'], ".php");
-?>
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -44,11 +37,11 @@ $current=basename($_SERVER['PHP_SELF'], ".php");
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-        <li <?php if ($current=="index" || $current=="") {echo "class='active'"; }?>><a href="index.php">Home <span class="sr-only">(current)</span></a></li>
-        <li <?php if ($current=="courses") {echo "class='active'"; }?>><a href="courses.php">Courses</a></li>
-        <li <?php if ($current=="trainers") {echo "class='active'"; }?>><a href="trainers.php">Trainers</a></li>
+        <li <?php if ($this->filename=="pages/home" || $this->filename=="") {echo "class='active'"; }?>><a href="index.php">Home <span class="sr-only">(current)</span></a></li>
+        <li <?php if ($this->filename=="courses/index" || $this->filename=="courses/show") {echo "class='active'"; }?>><a href="<?php echo Config::get('base_url');?>courses/index">Courses</a></li>
+        <li <?php if ($this->filename=="trainers/index") {echo "class='active'"; }?>><a href="<?php echo Config::get('base_url');?>trainers/index">Trainers</a></li>
         
-        <li id="my-account-menu" <?php if ($current=="my-account") {echo "class='active'"; }?>><a href="my-account.php">Ο λογαριασμός μου</a></li>
+        <li id="my-account-menu" <?php if ($this->filename=="user/profile") {echo "class='active'"; }?>><a href="<?php echo Config::get('base_url');?>user/profile">Ο λογαριασμός μου</a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> <span class="glyphicon glyphicon-shopping-cart"></span> 1 - υπηρεσία<span class="caret"></span></a>
           <ul class="dropdown-menu dropdown-cart" role="menu">
@@ -67,12 +60,12 @@ $current=basename($_SERVER['PHP_SELF'], ".php");
                 </span>
               </li>
               <li class="divider"></li>
-              <li><a class="text-center" href="cart.php">Προβολή καλαθιού</a></li>
+              <li><a class="text-center" href="<?php echo Config::get('base_url');?>cart/index">Προβολή καλαθιού</a></li>
           </ul>
         </li>        
       </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
+    </div>
+  </div>
 </nav>
 </div>
 </div>
